@@ -329,6 +329,12 @@ export default class Drawer extends Component {
       return false
     }
 
+    if (
+      ((this._open && swipeInCloseDirection) || (!this._open && !swipeInCloseDirection)) &&
+       Math.abs(gestureState.dx) < this.props.panThreshold) {
+      return false
+    }
+
     this.terminateActiveTween()
     return true
   };
