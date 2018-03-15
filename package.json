@@ -1,6 +1,6 @@
 {
   "name": "react-native-drawer",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "description": "React Native Drawer",
   "main": "index.js",
   "scripts": {},
@@ -9,8 +9,8 @@
     "url": "git@github.com:rt2zz/react-native-drawer.git"
   },
   "dependencies": {
-    "tween-functions": "^1.0.1",
-    "prop-types": "^15.5.8"
+    "prop-types": "^15.5.8",
+    "tween-functions": "^1.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^4.1.8",
