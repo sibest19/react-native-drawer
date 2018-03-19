@@ -55,6 +55,7 @@ export default class Drawer extends Component {
     onOpenStart: PropTypes.func,
     onDragStart: PropTypes.func,
     openDrawerOffset: PropTypes.oneOfType([PropTypes.number, PropTypes.func]),
+    swipeThreshold: PropTypes.number,
     panThreshold: PropTypes.number,
     panCloseMask: PropTypes.number,
     panOpenMask: PropTypes.number,
@@ -79,6 +80,7 @@ export default class Drawer extends Component {
     type: 'displace',
     closedDrawerOffset: 0,
     openDrawerOffset: 0,
+    swipeThreshold: 0,
     panThreshold: 0.25, // @TODO consider rename to panThreshold
     panOpenMask: null, // defaults to closedDrawerOffset
     panCloseMask: null, // defaults to openDrawerOffset
@@ -331,7 +333,7 @@ export default class Drawer extends Component {
 
     if (
       ((this._open && swipeInCloseDirection) || (!this._open && !swipeInCloseDirection)) &&
-       Math.abs(gestureState.dx) < this.props.panThreshold) {
+       Math.abs(gestureState.dx) < this.props.swipeThreshold) {
       return false
     }
 
